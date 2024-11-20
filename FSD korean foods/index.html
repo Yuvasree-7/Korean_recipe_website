@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Change background to the new image */
+    background-image: url("bg-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the image stays in place while scrolling */
+    color: white;
+}
+
+
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* Navigation Styling */
+        .nav-menu {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .nav-menu a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-weight: 700;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        header p {
+            font-weight: 400;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Korean Recipe Description */
+        .korean-recipes-description {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .korean-recipes-description h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .korean-recipes-description p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .korean-recipes-description a {
+            font-size: 1.2em;
+            color: #1a73e8;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .korean-recipes-description a:hover {
+            background-color: #ddd;
+        }
+
+        /* Background Carousel */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1000px; /* Adjust width */
+            height: 400px; /* Fixed height for consistency */
+            margin: 0 auto;
+            border-radius: 15px; /* Smooth corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 1.5s ease-in-out; /* Smooth background transition */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Navigation menu for login and signup -->
+            <div class="nav-menu">
+                <a href="login.html">Login</a> |
+                <a href="signup.html">Signup</a>
+            </div>
+
+            <h1>Korean Recipe Book</h1>
+            <p>Explore, Cook, and Enjoy Delicious Meals!</p>
+        </header>
+
+        <main>
+            <!-- Korean Recipes Section with Description -->
+            <div class="korean-recipes-description">
+                <h2>Discover the Flavors of Korean Cuisine</h2>
+                <p>Korean cuisine offers a vibrant mix of flavors, with dishes that are as diverse as the country's culture. From savory stews to fermented dishes, Korean food is rich in taste and history. Explore the world of Korean recipes and learn to cook these mouth-watering dishes at home.</p>
+                <a href="dishes.html">Explore Korean Recipes</a>
+            </div>
+
+            <!-- Image Carousel -->
+            <div class="carousel"></div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2023 Gourmet Recipe Book. All rights reserved.</p>
+        <div class="copyright">
+            <p>Image © Owner. Used under license.</p>
+        </div>
+    </footer>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const backgroundImages = [
+            "url('Dumplings.jpg')",
+            "url('Hobak jeon.jpg')",
+            "url('ramen.png')",
+            "url('Sundubu-jjigae.jpg')",
+            "url('Mul-naengmyeon.jpg')"
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgroundImages.length; // Cycle through the images
+            carousel.style.backgroundImage = backgroundImages[currentIndex];
+        }
+
+        setInterval(changeBackground, 3000); // Change background every 3 seconds
+    </script>
+</body>
+
+</html>
+
+
+
